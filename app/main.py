@@ -1,11 +1,9 @@
-from __future__ import annotations
-
 from app.book import Book
 from app.printer import BookPrinter
 from app.serializer import BookSerializer
 
 
-def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
+def main(book: Book, commands: list[tuple[str, str]]) -> str:
     for cmd, method_type in commands:
         if cmd == "display":
             book.display(method_type)
